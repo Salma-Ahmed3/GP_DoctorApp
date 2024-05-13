@@ -10,9 +10,7 @@ import 'package:gbsub/Features/Login/Logic/LoginCubit.dart';
 import 'package:gbsub/Features/Login/Logic/loginstates.dart';
 import 'package:gbsub/Core/utilts/widgets/custom_elevated_button_button.dart';
 import 'package:gbsub/Features/Login/Ui/widgets/custom_email_text_form_feild.dart';
-import 'package:gbsub/Features/Login/Ui/widgets/custom_new_account_stack.dart';
 import 'package:gbsub/Features/Login/Ui/widgets/custom_password_text_form_feild.dart';
-import 'package:gbsub/Features/Login/Ui/widgets/custom_text_button.dart';
 import 'package:gbsub/core/utilts/style.dart';
 
 class LoginViewBody extends StatelessWidget {
@@ -112,14 +110,6 @@ class LoginViewBody extends StatelessWidget {
                             }
                           },
                         ),
-                  SizedBox(
-                    height: 50.h,
-                  ),
-                  const CreateNewAccountStack(),
-                  SizedBox(
-                    height: 30.h,
-                  ),
-                  const CustomTextButton()
                 ],
               ),
             ),

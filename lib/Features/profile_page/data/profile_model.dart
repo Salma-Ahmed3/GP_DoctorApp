@@ -10,6 +10,6 @@ class ProfileModel {
   });
   factory ProfileModel.fromjson(json) {
     return ProfileModel(
-        name: json['name'], pic: json['pic'], email: json['email']);
+        name: json['name'], pic: json['profilePic'], email: json['email']);
   }
 }

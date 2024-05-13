@@ -21,8 +21,7 @@ class Logincubit extends Cubit<LoginStates> {
 
   void onEmailfeildchanged(String x) {
     email = x;
-    // ignore: unused_local_variable
-    AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
+
     emit(LoginChangedstate());
   }
 
@@ -32,8 +31,6 @@ class Logincubit extends Cubit<LoginStates> {
 
   void onPasswordfeildchanged(String x) {
     password = x;
-    // ignore: unused_local_variable
-    AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
     emit(LoginChangedstate());
   }
 
@@ -44,10 +41,9 @@ class Logincubit extends Cubit<LoginStates> {
   Future<bool> login(Dio dio) async {
     emit(LoginLoadingState());
     var response =
-        await dio.get('$baseUrl/User?email=$email&password=$password');
+        await dio.get('$baseUrl/Doctor/Log IN?email=$email&password=$password');
     response.statusCode == 200 &&
-            response.data ==
-                "Wrong email or passwrod try agin and make sure you entered the right password"
+            response.data == "wrong email or password try again"
         ? loginState = false
         : loginState = true;
     if (loginState) {
