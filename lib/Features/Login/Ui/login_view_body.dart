@@ -112,14 +112,6 @@ class LoginViewBody extends StatelessWidget {
                             }
                           },
                         ),
-                  SizedBox(
-                    height: 50.h,
-                  ),
-                  const CreateNewAccountStack(),
-                  SizedBox(
-                    height: 30.h,
-                  ),
-                  const CustomTextButton()
                 ],
               ),
             ),

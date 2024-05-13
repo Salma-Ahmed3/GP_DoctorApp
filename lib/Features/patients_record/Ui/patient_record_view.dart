@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gbsub/Core/utilts/constans.dart';
 import 'package:gbsub/Core/utilts/style.dart';
-import 'package:gbsub/Features/patient_record/Ui/patient_record_view_body.dart';
+import 'package:gbsub/Features/patients_record/Ui/patient_record_view_body.dart';
 
 class PatientRecordView extends StatelessWidget {
   const PatientRecordView({super.key});

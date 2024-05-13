@@ -6,7 +6,7 @@ import 'package:gbsub/Features/Home/Ui/widgets/custom_medication_info_list_view.
 import 'package:gbsub/Features/Home/Ui/widgets/custom_news_container.dart';
 import 'package:gbsub/Features/YourClinicc/Ui/reservation_view.dart';
 import 'package:gbsub/Features/instructions/Ui/instructions_view.dart';
-import 'package:gbsub/Features/patient_record/Ui/patient_record_view.dart';
+import 'package:gbsub/Features/patients_record/Ui/patient_record_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gbsub/Features/patient_record/Ui/patient_record_view.dart';
+import 'package:gbsub/Features/patients_record/Ui/patient_record_view.dart';
 import 'package:gbsub/Features/profile_page/ui/widgets/cutom_row_conatiner_text.dart';
 
 class CustomProfileRowContainer extends StatelessWidget {

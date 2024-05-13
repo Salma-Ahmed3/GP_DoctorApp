@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gbsub/Features/patient_record/Ui/widgets/patient_record_list_view_item.dart';
+import 'package:gbsub/Features/patients_record/Ui/widgets/patient_record_list_view_item.dart';
 
 class PatientRecordListView extends StatelessWidget {
   const PatientRecordListView({super.key});
