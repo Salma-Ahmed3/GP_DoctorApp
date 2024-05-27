@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gbsub/Core/utilts/constans.dart';
-import 'package:gbsub/Core/utilts/style.dart';
+import 'package:gbsub/Core/utils/constans.dart';
+import 'package:gbsub/Core/utils/style.dart';
 
 class CustomButtonItem extends StatelessWidget {
   const CustomButtonItem({

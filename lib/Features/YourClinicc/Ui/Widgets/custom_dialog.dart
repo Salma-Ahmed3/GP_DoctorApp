@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gbsub/core/utilts/style.dart';
+import 'package:gbsub/core/utils/style.dart';
 
 class Customdialog extends StatelessWidget {
   const Customdialog({

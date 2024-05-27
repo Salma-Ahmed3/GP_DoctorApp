@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gbsub/Core/utilts/assets.dart';
+import 'package:gbsub/Core/utils/constans.dart';
+import 'package:gbsub/Features/YourClinicc/Models/reservation_models.dart';
 import 'package:gbsub/Features/YourClinicc/Ui/Widgets/list_item.dart';
 import 'package:gbsub/Features/profile_page/ui/widgets/custom_profile_view_body_divider.dart';
 
 class ListReservationItem extends StatelessWidget {
-  const ListReservationItem({super.key});
+  const ListReservationItem({
+    super.key,
+    required this.reservationModels,
+  });
+  final ReservationModels reservationModels;
 
   @override
   Widget build(BuildContext context) {
@@ -18,18 +23,21 @@ class ListReservationItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const CircleAvatar(
-                  radius: 35,
-                  backgroundImage: AssetImage(AssetsData.Patient),
+                CircleAvatar(
+                  radius: 30,
+                  backgroundImage:
+                      NetworkImage('$imageUrl${reservationModels.pic}'),
                 ),
                 SizedBox(
                   width: 30.w,
                 ),
-                const ListItem(),
+                ListItem(
+                  reservationModels: reservationModels,
+                ),
               ],
             ),
             SizedBox(
-              height: 10.h,
+              height: 20.h,
             ),
             const CustomDivider(),
           ],

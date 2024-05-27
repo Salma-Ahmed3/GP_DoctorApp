@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gbsub/Core/utilts/constans.dart';
+import 'package:gbsub/Core/utils/constans.dart';
 import 'package:gbsub/Features/YourClinicc/Ui/Widgets/custom_button_item.dart';
 import 'package:gbsub/Features/YourClinicc/Ui/Widgets/custom_dialog.dart';
 
@@ -13,8 +13,8 @@ class CustomButton extends StatelessWidget {
       CustomButtonItem(
         onPressed: () async {},
         text: 'تاكيد الحجز',
-        textcolor: mainColor,
-        buttonColor: Colors.white,
+        textcolor: Colors.white,
+        buttonColor: mainColor,
       ),
       SizedBox(
         width: 10.w,
