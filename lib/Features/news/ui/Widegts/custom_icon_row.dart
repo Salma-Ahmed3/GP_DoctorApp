@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gbsub/Core/utilts/constans.dart';
+import 'package:gbsub/Core/utils/constans.dart';
 
 class IconRow extends StatelessWidget {
   const IconRow({super.key});

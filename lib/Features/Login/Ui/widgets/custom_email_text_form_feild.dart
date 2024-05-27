@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gbsub/Core/utilts/constans.dart';
-import '../../../../../core/utilts/style.dart';
+import 'package:gbsub/Core/utils/constans.dart';
+import '../../../../../core/utils/style.dart';
 
 class CustomEmailTextFormFeild extends StatelessWidget {
   const CustomEmailTextFormFeild(

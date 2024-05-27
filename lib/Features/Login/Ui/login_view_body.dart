@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gbsub/Core/services/sharedpref.dart';
-import 'package:gbsub/Core/utilts/constans.dart';
-import 'package:gbsub/Core/utilts/widgets/custom_snack_bar.dart';
+import 'package:gbsub/Core/utils/constans.dart';
+import 'package:gbsub/Core/utils/widgets/custom_snack_bar.dart';
 import 'package:gbsub/Features/Home/Ui/Home_view.dart';
 import 'package:gbsub/Features/Login/Logic/LoginCubit.dart';
 import 'package:gbsub/Features/Login/Logic/loginstates.dart';
-import 'package:gbsub/Core/utilts/widgets/custom_elevated_button_button.dart';
+import 'package:gbsub/Core/utils/widgets/custom_elevated_button_button.dart';
 import 'package:gbsub/Features/Login/Ui/widgets/custom_email_text_form_feild.dart';
 import 'package:gbsub/Features/Login/Ui/widgets/custom_password_text_form_feild.dart';
-import 'package:gbsub/core/utilts/style.dart';
+import 'package:gbsub/core/utils/style.dart';
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({

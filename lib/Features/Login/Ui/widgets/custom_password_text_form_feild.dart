@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gbsub/Core/utilts/constans.dart';
+import 'package:gbsub/Core/utils/constans.dart';
 import 'package:gbsub/Features/Login/Logic/LoginCubit.dart';
 
-import '../../../../../core/utilts/style.dart';
+import '../../../../../core/utils/style.dart';
 
 class CustomPasswordTextFormFeild extends StatelessWidget {
   const CustomPasswordTextFormFeild(

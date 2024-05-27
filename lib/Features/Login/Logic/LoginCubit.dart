@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gbsub/Core/utilts/constans.dart';
+import 'package:gbsub/Core/utils/constans.dart';
 import 'package:gbsub/Features/Login/Logic/loginstates.dart';
 import 'package:dio/dio.dart';
 

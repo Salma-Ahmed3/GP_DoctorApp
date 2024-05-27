@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gbsub/Core/utilts/constans.dart';
+import 'package:gbsub/Core/utils/constans.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class NewsWebView extends StatelessWidget {
