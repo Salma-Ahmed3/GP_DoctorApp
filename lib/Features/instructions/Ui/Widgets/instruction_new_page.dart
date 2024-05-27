@@ -1,41 +1,33 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:gbsub/Core/utilts/assets.dart';
-import 'package:gbsub/Core/utilts/style.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gbsub/Core/services/api_services.dart';
+import 'package:gbsub/Features/instructions/Logic/cubit_new_instruction/new_instruction_cubit.dart';
 import 'package:gbsub/Features/instructions/Ui/Widgets/add_instruction.dart';
-import 'package:gbsub/Features/instructions/Ui/Widgets/button_send.dart';
-import 'package:gbsub/Features/instructions/Ui/Widgets/name_doctor.dart';
+import 'package:gbsub/Features/instructions/Ui/Widgets/custom_button_send.dart';
+import 'package:gbsub/Features/instructions/repos/instruction_repo_impl.dart';
 
 class AddingNewInstructionPage extends StatelessWidget {
   const AddingNewInstructionPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      // margin: const EdgeInsets.all(10),
-      child: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('إرشادات من الدكتور',
-                style: Styles.style16.copyWith(fontSize: 20)),
-            const SizedBox(height: 15),
-            const Row(
+    return BlocProvider(
+        create: (context) => NewInstructionCubit(
+              InstructionRepoImpl(apiService: ApiService(Dio())),
+            ),
+        child: const Padding(
+          padding: EdgeInsets.all(20),
+          child: Align(
+            child: Column(
               children: [
-                CircleAvatar(
-                  radius: 30,
-                  backgroundImage: AssetImage(AssetsData.DoctorHurt),
-                ),
-                SizedBox(width: 15),
-                NameOfDoctor(),
+                AddInstraction(),
+                SizedBox(height: 20),
+                ButtonSend(),
               ],
             ),
-            const SizedBox(height: 15),
-            const AddInstraction(),
-            const ButtonSend()
-          ],
-        ),
-      ),
-    );
+          ),
+        ));
   }
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gbsub/Core/utilts/constans.dart';
-import 'package:gbsub/Core/utilts/style.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gbsub/Core/utils/style.dart';
+import 'package:gbsub/Features/instructions/Logic/cubit_new_instruction/new_instruction_cubit.dart';
 
 class AddInstraction extends StatelessWidget {
   const AddInstraction({super.key});
@@ -9,28 +11,38 @@ class AddInstraction extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Align(
-          alignment: Alignment.centerRight,
-          child: Text(
-            'إضافة إرشاداتك:',
-            style: Styles.style16,
-          ),
-        ),
         const SizedBox(height: 10.0),
-        TextField(
-          cursorColor: mainColor,
+        const SizedBox(height: 10.0),
+        TextFormField(
+          maxLines: 5,
+          autofocus: true,
+          style: Styles.style16.copyWith(color: Colors.black),
+          validator: (value) {
+            if (value?.isEmpty ?? true) {
+              return 'هذا الحقل مطلوب';
+            } else {
+              return null;
+            }
+          },
+          onSaved: (value) {
+            BlocProvider.of<NewInstructionCubit>(context)
+                .enterHealthAdvice(value!);
+          },
+          onChanged: (value) {
+            BlocProvider.of<NewInstructionCubit>(context)
+                .enterHealthAdvice(value);
+          },
+          textDirection: TextDirection.rtl,
           decoration: InputDecoration(
-            border: OutlineInputBorder(
-              borderSide: BorderSide(color: mainColor),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: mainColor),
-            ),
+            hintStyle: Styles.style16.copyWith(color: Colors.grey.shade400),
+            hintText: 'أدخل إرشاداتك هنا ...',
+            hintTextDirection: TextDirection.rtl,
             focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: mainColor),
-            ),
-            fillColor: Colors.grey[200],
-            filled: true,
+                borderSide: const BorderSide(color: Colors.transparent),
+                borderRadius: BorderRadius.circular(8.w)),
+            enabledBorder: OutlineInputBorder(
+                borderSide: const BorderSide(color: Colors.transparent),
+                borderRadius: BorderRadius.circular(8.w)),
           ),
         ),
         const SizedBox(height: 20),
