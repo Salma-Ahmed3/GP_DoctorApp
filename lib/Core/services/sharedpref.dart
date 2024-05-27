@@ -1,4 +1,4 @@
-import 'package:gbsub/Core/utilts/constans.dart';
+import 'package:gbsub/Core/utils/constans.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Sharedhelper {
