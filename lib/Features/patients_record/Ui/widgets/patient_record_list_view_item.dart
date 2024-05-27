@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gbsub/Core/utilts/assets.dart';
-import 'package:gbsub/Core/utilts/style.dart';
+import 'package:gbsub/Core/utils/assets.dart';
+import 'package:gbsub/Core/utils/style.dart';
 import 'package:gbsub/Features/profile_page/ui/widgets/custom_profile_view_body_divider.dart';
 
 class PatientRecordListViewItem extends StatelessWidget {
