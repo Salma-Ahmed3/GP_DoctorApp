@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gbsub/Core/utilts/style.dart';
+import 'package:gbsub/Core/utils/style.dart';
 import 'package:gbsub/Features/patients_record/Ui/patient_record_view.dart';
 import 'package:gbsub/Features/profile_page/data/profile_model.dart';
 import 'package:gbsub/Features/profile_page/logic/profile_cubit.dart';

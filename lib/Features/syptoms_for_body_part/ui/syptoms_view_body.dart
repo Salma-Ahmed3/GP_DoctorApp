@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gbsub/Core/services/sharedpref.dart';
 import 'package:gbsub/Core/utils/constans.dart';
 import 'package:gbsub/Core/utils/style.dart';
-import 'package:gbsub/Features/profile_page/logic/profile_cubit.dart';
-import 'package:gbsub/Features/profile_page/ui/widgets/custom_profile_container.dart';
 
-class ProfileViewBody extends StatelessWidget {
-  const ProfileViewBody({super.key});
+import 'package:gbsub/Features/syptoms_for_body_part/logic/syptoms_cubit.dart';
+import 'package:gbsub/Features/syptoms_for_body_part/ui/widgets/symptomsListView.dart';
+
+class SyptomsViewBody extends StatelessWidget {
+  const SyptomsViewBody({
+    super.key,
+    required this.id,
+  });
+
+  final int id;
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: BlocProvider.of<ProfileCubit>(context)
-          .getprofiledetails(Sharedhelper.getintdata(intkey)),
+      future: BlocProvider.of<SyptomsCubit>(context).getSyptomsForBodyPart(id),
       builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Center(
@@ -22,16 +26,12 @@ class ProfileViewBody extends StatelessWidget {
             ),
           );
         } else if (snapshot.connectionState == ConnectionState.done) {
-          return CustomProfileConatiner(
-              profileModel:
-                  BlocProvider.of<ProfileCubit>(context).profileModel);
+          return const SyptomsListView();
         } else {
           return Center(
             child: Text(
-              'تأكد من وجود انترنت',
-              style: Styles.styleBold16.copyWith(
-                color: mainColor,
-              ),
+              'تأكد من ألأاتصال بالأنترنت',
+              style: Styles.styleBold24.copyWith(color: mainColor),
             ),
           );
         }

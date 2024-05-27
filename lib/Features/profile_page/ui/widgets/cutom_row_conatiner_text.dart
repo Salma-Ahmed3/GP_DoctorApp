@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gbsub/Core/utilts/style.dart';
+import 'package:gbsub/Core/utils/style.dart';
 
 class CustomProfileViewRowText extends StatelessWidget {
   const CustomProfileViewRowText({
